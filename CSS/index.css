@@ -5,10 +5,54 @@
 }
 
 body {
-  background: rgb(36, 0, 56);
+  background-color: indigo;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
 }
 
 @media screen and (max-width: 1920px) {
+  span {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+  }
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 65px;
+    right: 0px;
+    width: 20%;
+    border: px solid black;
+    height: 55%;
+    transition: 0.2s all ease;
+    background: rgba(60, 60, 60, 0);
+    box-shadow: 0 8px 32px 0 rgba(7, 7, 7, 0.37);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    border-radius: 10px;
+  }
+  #menu #redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #menu a {
+    margin: 1rem;
+    text-align: center;
+    border: 1px solid white;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat";
+    background: rgba(60, 60, 60, 0);
+    box-shadow: 0 8px 32px 0 rgba(7, 7, 7, 0.37);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    border-radius: 10px;
+  }
   .container {
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -275,7 +319,6 @@ body {
     border: 3px solid rgb(149, 0, 255);
     border-radius: 20px;
     transition: 0.2s;
-    filter: drop-shadow(1px 1px 5px black);
   }
   .depoimentos .imgs img:hover {
     transform: scale(1.02) translateY(-5px);
@@ -311,7 +354,6 @@ body {
     transform: scale(1.03);
   }
   .amostras a {
-    width: 700px;
     text-decoration: none;
   }
   .amostras a p {
@@ -320,7 +362,6 @@ body {
     padding: 1.5rem;
     text-align: center;
     transition: 0.3s;
-    filter: drop-shadow(0 0 0);
   }
   .amostras a p:hover {
     transform: scale(1.02);
@@ -339,9 +380,181 @@ body {
     color: white;
   }
 }
+@media screen and (max-width: 428px) {
+  span img {
+    filter: invert(1);
+  }
+  #menu {
+    width: 100%;
+    height: 100vh;
+  }
+  .container #logo {
+    margin-top: 2rem;
+  }
+  .container #logo img {
+    width: 355px;
+  }
+  .container #three img {
+    width: 450px;
+  }
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container2 #oque {
+    width: 90%;
+  }
+  .container2 #oque p {
+    font-size: 15px;
+    width: 100%;
+  }
+  .container2 #two {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .container2 #two #onde {
+    width: 100%;
+  }
+  .container2 #two #onde p {
+    font-size: 20px;
+    width: 100%;
+  }
+  .container3 {
+    height: auto;
+  }
+  .container3 h1 {
+    margin-top: 2rem;
+  }
+  .container3 #cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container3 #cards #card #premium {
+    width: 355px;
+  }
+  .container3 #cards #card img {
+    width: 355px;
+  }
+  .container4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .container4 h1 {
+    margin-top: 2rem;
+  }
+  .container4 #cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin-bottom: 2rem;
+  }
+  .container4 #cards #card img {
+    width: 355px;
+  }
+  .container5 {
+    height: auto;
+  }
+  .container5 #valores {
+    margin-top: 2rem;
+  }
+  .container5 #valores p {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+  .container5 #valores h1 {
+    font-size: 25px;
+  }
+  .container5 hr {
+    width: 250px;
+    margin: auto;
+  }
+  .container5 #formas h1 {
+    font-size: 25px;
+  }
+  .container5 #formas hr {
+    width: 250px;
+    margin: 0.5rem auto;
+  }
+  .depoimentos {
+    height: auto;
+    width: 100%;
+  }
+  .depoimentos .imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .depoimentos .imgs img {
+    width: 155px;
+  }
+  .amostras {
+    height: 100vh;
+    width: 100%;
+  }
+  .amostras h1 {
+    margin-top: 2rem;
+  }
+  .amostras .imgs {
+    width: 100%;
+  }
+  .amostras .imgs img {
+    width: 155px;
+  }
+}
 @media screen and (max-width: 414px) {
   body {
     overflow-x: hidden;
+  }
+  span {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+  }
+  span img {
+    filter: invert(1);
+    width: 30px;
+  }
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 65px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease;
+    background: rgba(60, 60, 60, 0);
+    box-shadow: 0 8px 32px 0 rgba(7, 7, 7, 0.37);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    border-radius: 10px;
+  }
+  #menu #redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #menu a {
+    margin: 1rem;
+    text-align: center;
+    border: 1px solid white;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat";
+    background: rgba(60, 60, 60, 0);
+    box-shadow: 0 8px 32px 0 rgba(7, 7, 7, 0.37);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    border-radius: 10px;
   }
   .container {
     display: flex;
@@ -462,6 +675,10 @@ body {
   .container5 #valores hr {
     width: 255px;
     margin: auto;
+  }
+  .container5 #valores p {
+    width: 300px;
+    margin: 1rem auto;
   }
   .container5 #formas h1 {
     font-size: 21px;
